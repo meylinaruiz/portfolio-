@@ -1,0 +1,14 @@
+body {
+    background-color: #e0f7fa;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 20px;
+}
+h1, h2 { color: #007bff; }
+.content-block {
+    border: 3px solid #007bff;
+    padding: 25px;
+    margin: 30px 0;
+    background-color: white;
+}
+.tableau-container { margin: 40px 0; padding: 15px; border: 2px dashed #28a745; }
