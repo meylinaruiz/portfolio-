@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Calorie Estimator</title>
+    <style>body { font-family: Arial; background: #e0f7fa; padding: 20px; text-align: center; } input, select, button { margin: 10px; padding: 10px; }</style>
+</head>
+<body>
+    <div>
+        <h1>Calorie Burn Estimator</h1>
+        <p>For your 115 lb workouts 💪</p>
+        <input type="number" id="weight" value="115" placeholder="Weight (lbs)">
+        <input type="number" id="minutes" value="30" placeholder="Minutes">
+        <select id="intensity">
+            <option value="5">Light</option>
+            <option value="7" selected>Moderate</option>
+            <option value="10">Intense</option>
+        </select>
+        <button onclick="calculate()">Calculate</button>
+        <p id="result" style="font-size:1.2rem; font-weight:bold;"></p>
+        <a href="scratch.html">← Back</a>
+    </div>
+    <script>
+        function calculate() {
+            const w = parseFloat(document.getElementById('weight').value) || 115;
+            const m = parseFloat(document.getElementById('minutes').value) || 30;
+            const i = parseFloat(document.getElementById('intensity').value);
+            const cal = Math.round(w * (i / 60) * m);
+            document.getElementById('result').innerHTML = `You burned ~${cal} calories!`;
+        }
+    </script>
+</body>
+</html>
